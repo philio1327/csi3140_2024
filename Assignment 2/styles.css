@@ -1,0 +1,27 @@
+/*Star Rule for Question 4.3*/
+body {
+    font-size: 150%;
+    color: red;
+    background-image: url("cat.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+h1 {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    color: green;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
