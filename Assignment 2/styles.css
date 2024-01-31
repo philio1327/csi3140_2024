@@ -29,3 +29,19 @@ h1, h2 {
     border: dashed;
     margin: 0.5em;
 }
+
+.green-move {
+    color: green;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.paragraph1 {
+    float: left;
+    background-color: aqua;
+}
+
+.paragraph2 {
+    background-color: aqua;
+    float: right;
+}
