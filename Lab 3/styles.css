@@ -1,0 +1,9 @@
+th, td, table {
+    margin: 0 auto;
+    border: 1px, solid;
+    border-style: solid;
+    text-align: center;
+}
+h1, h3 {
+    text-align: center;
+}
