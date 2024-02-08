@@ -154,7 +154,7 @@ document.writeln("<p>Next, we check if row is greater than or equal to 1, which 
 document.writeln("<p>Next, we add a paragraph tag to the HTML document. Then we create another while loop which gets entered since column is less than or equal to 10</p>");
 document.writeln("<p>Next we write either a '<' character or a '>' to the document depending on whether the row is an odd or even number.</p>");
 document.writeln("<p>It prints '<' if row is odd, otherwise it prints '>' </p>");
-document.writeln("<p>The inner while loop gets run 10 times, given than the column variable is incremented by 1 at each iteration</p>");
+document.writeln("<p>The inner while loop gets run 10 times, given that the column variable is incremented by 1 at each iteration</p>");
 document.writeln("<p>The first iteration, row=10, column=1, it prints >>>>>>>>>> then we decrement row by 1 and reset the column variable to 1</p>");
 document.writeln("<p>The next iteration, row=9, column=1 and it prints <<<<<<<<<< until column reaches a value of 11, then we decrement the row value by 1 and reset column to 1 </p>");
 document.writeln("<p>Rinse and repeat by alternating between first and next iteration, with each decreasing row value until row=0</p>");
