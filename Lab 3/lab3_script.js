@@ -52,11 +52,11 @@ let quantityArray = [0, 0, 0, 0, 0];
 let totalArray = [0, 0, 0, 0, 0];
 while (true) {
     let productNumber = prompt("Enter the product number (1-5), or type 'exit' to quit:");
-    if (productNumber.toLowerCase() === "exit") {
-        break; // Exit the loop if 'exit' is entered
+    if (productNumber.length === 0 || productNumber.toLowerCase() === "exit") {
+        break; // Exit the loop if 'exit' is entered or no content
     }
     productNumber = parseInt(productNumber); 
-    let quantity = parseInt(prompt("Enter the quantity sold for one day:"));
+    let quantity = parseInt(prompt("Enter the quantity of product sold:"));
     if (productNumber >0 && productNumber <= products.length) {
         quantityArray[productNumber-1] = parseInt(quantityArray[productNumber-1]) + parseInt(quantity);
     }
@@ -68,7 +68,7 @@ while (true) {
     }
     alert(`Total retail value for product ${productNumber}: $${totalRetailValue}`);
 }
-document.writeln("<p>Quantity Table</p>");
+document.writeln("<h4>Quantity Table</h4>");
 document.writeln("<table>");
 document.writeln("<tr>");
 document.writeln("<th>Product Number</th>");
