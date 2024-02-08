@@ -13,3 +13,6 @@ table {
 td, th {
     border: 3px double;
 }
+.indented {
+    margin-left: 20px;
+}
