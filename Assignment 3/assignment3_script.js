@@ -161,17 +161,4 @@ document.writeln("<p>Rinse and repeat by alternating between first and next iter
 document.writeln("<p>Once row=0, we exit the outer while loop and the program terminates</p>");
 document.writeln("<img src='screenshot2.png' />");
 
-var row = 10;
-var column;
-while (row>=1)
-{
-    column = 1;
-    document.writeln("<p>");
-    while (column <= 10)
-    {
-        document.write( row % 2 == 1 ? "<" : ">");
-        ++column;
-    }
-    --row;
-    document.writeln("</p>");
-}
+/////////////////////////////////////////////////////////////// 8.4 //////////////////////////////////////////////////////////////////////////////
