@@ -162,3 +162,16 @@ document.writeln("<p>Once row=0, we exit the outer while loop and the program te
 document.writeln("<img src='screenshot2.png' />");
 
 /////////////////////////////////////////////////////////////// 8.4 //////////////////////////////////////////////////////////////////////////////
+
+// a) it should be x-- or else the loop will run infinitely because x will always be >= 1
+
+// b) Missing the break; statements after both case declarations
+
+// c) the -= operator should be used instead of the += operator
+
+// d) it should be <= 100 so 100 is included in the outputs and the "While" should also be in lowercase
+
+
+/////////////////////////////////////////////////////////////// 8.5 //////////////////////////////////////////////////////////////////////////////
+
+// It generates a table with 7 rows and 5 columns, where each cell contains the coordinate pair ex: (2,3) representing its row and column indices.
