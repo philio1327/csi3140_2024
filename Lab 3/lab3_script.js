@@ -62,8 +62,8 @@ function calculateTotal(productNumber, quantity) {
         default:
             return "Invalid product number";
     }
-    const total = price * quantity;
-    return total.toFixed(2); // Round to 2 decimal places
+    const total = parseFloat(price) * parseInt(quantity);
+    return parseFloat(total).toFixed(2); // Round to 2 decimal places
 }
 
 // Initialize arrays to store quantity and total value for each product
@@ -94,8 +94,8 @@ while (true) {
 
     // Update quantity and total value arrays
     let index = productNumber - 1;
-    quantityArray[index] += quantity;
-    totalArray[index] += calculateTotal(productNumber, quantity);
+    quantityArray[index] += parseInt(quantity);
+    totalArray[index] = (parseFloat(totalArray[index]) + parseFloat(calculateTotal(productNumber, quantity))).toFixed(2);
 }
 
 // Display quantity table
