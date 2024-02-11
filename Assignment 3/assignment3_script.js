@@ -162,7 +162,8 @@ document.writeln("<p>Once row=0, we exit the outer while loop and the program te
 document.writeln("<img src='screenshot2.png' />");
 
 /////////////////////////////////////////////////////////////// 8.4 //////////////////////////////////////////////////////////////////////////////
-
+document.writeln("<h3>Question 8.4 & 8.5 </h3>");
+document.writeln("<p>Please See Javascript File for answers</p>");
 // a) it should be x-- or else the loop will run infinitely because x will always be >= 1
 
 // b) Missing the break; statements after both case declarations
