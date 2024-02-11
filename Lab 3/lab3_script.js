@@ -30,44 +30,75 @@ for (let i=1; i<7; i++){
 document.writeln("</table>");
 /////////////////////////////////////////////////////////////// 8.11 /////////////////////////////////////////////////////////////////////////////
 document.writeln("<h3>Question 8.11 - Retail Prices</h3>");
+
+// Define retail prices for each product
 const retailPrices = {
     1: 2.98,
     2: 4.50,
     3: 9.98,
     4: 4.49,
     5: 6.87
-}
+};
 
+// Function to calculate total retail value for a product
 function calculateTotal(productNumber, quantity) {
-    if (retailPrices.hasOwnProperty(productNumber)) {
-        const price = retailPrices[productNumber];
-        const total = price * quantity;
-        return total.toFixed(2); // Round to 2 decimal places
-    } else {
-        return "Invalid product number";
+    let price;
+    switch (productNumber) {
+        case 1:
+            price = retailPrices[1];
+            break;
+        case 2:
+            price = retailPrices[2];
+            break;
+        case 3:
+            price = retailPrices[3];
+            break;
+        case 4:
+            price = retailPrices[4];
+            break;
+        case 5:
+            price = retailPrices[5];
+            break;
+        default:
+            return "Invalid product number";
     }
+    const total = price * quantity;
+    return total.toFixed(2); // Round to 2 decimal places
 }
-let products = [1,2,3,4,5];
-let quantityArray = [0, 0, 0, 0, 0]; 
+
+// Initialize arrays to store quantity and total value for each product
+let quantityArray = [0, 0, 0, 0, 0];
 let totalArray = [0, 0, 0, 0, 0];
+
+// Loop to input product number and quantity
 while (true) {
-    let productNumber = prompt("Enter the product number (1-5), or type 'exit' to quit:");
-    if (productNumber.length === 0 || productNumber.toLowerCase() === "exit") {
-        break; // Exit the loop if 'exit' is entered or no content
+    let productInput = prompt("Enter the product number (1-5), or type 'exit' to quit:");
+    if (productInput === null || productInput.toLowerCase() === "exit") {
+        break; // Exit the loop if 'exit' is entered or Cancel is clicked
     }
-    productNumber = parseInt(productNumber); 
-    let quantity = parseInt(prompt("Enter the quantity of product sold:"));
-    if (productNumber >0 && productNumber <= products.length) {
-        quantityArray[productNumber-1] = parseInt(quantityArray[productNumber-1]) + parseInt(quantity);
+    let productNumber = parseInt(productInput);
+    if (productNumber < 1 || productNumber > 5 || isNaN(productNumber)) {
+        alert("Invalid product number. Please enter a number between 1 and 5.");
+        continue;
     }
 
-    // Calculate and display total retail value
-    const totalRetailValue = calculateTotal(productNumber, quantity);
-    if (productNumber >0 && productNumber <= products.length){
-        totalArray[productNumber-1] = (parseFloat(totalArray[productNumber-1]) + parseFloat(totalRetailValue)).toFixed(2);
+    let quantityInput = prompt("Enter the quantity of product sold:");
+    if (quantityInput === null) {
+        break; // Exit the loop if Cancel is clicked
     }
-    alert(`Total retail value for product ${productNumber}: $${totalRetailValue}`);
+    let quantity = parseInt(quantityInput);
+    if (isNaN(quantity) || quantity <= 0) {
+        alert("Invalid quantity. Please enter a positive number.");
+        continue;
+    }
+
+    // Update quantity and total value arrays
+    let index = productNumber - 1;
+    quantityArray[index] += quantity;
+    totalArray[index] += calculateTotal(productNumber, quantity);
 }
+
+// Display quantity table
 document.writeln("<h4>Quantity Table</h4>");
 document.writeln("<table>");
 document.writeln("<tr>");
@@ -75,19 +106,21 @@ document.writeln("<th>Product Number</th>");
 document.writeln("<th>Quantity Sold</th>");
 document.writeln("<th>Total Value</th>");
 document.writeln("</tr>");
-let numProducts = 0;
-let valProducts = 0.00;
-for (let i=0; i<products.length; i++){
+let totalQuantity = 0;
+let totalValue = 0;
+for (let i = 0; i < quantityArray.length; i++) {
+    let productNumber = i + 1;
     document.writeln("<tr>");
-    document.writeln(`<td>${products[i]}</td>`);
+    document.writeln(`<td>${productNumber}</td>`);
     document.writeln(`<td>${quantityArray[i]}</td>`);
     document.writeln(`<td>${totalArray[i]}</td>`);
-    document.writeln("</tr>")
-    numProducts += parseInt(quantityArray[i]);
-    valProducts = (parseFloat(valProducts) + parseFloat(totalArray[i])).toFixed(2);
+    document.writeln("</tr>");
+    totalQuantity += quantityArray[i];
+    totalValue += parseFloat(totalArray[i]);
 }
-document.writeln(`<tr>`);
+document.writeln("<tr>");
 document.writeln("<td><b>Totals:</b></td>");
-document.writeln(`<td>${numProducts}</td>`);
-document.writeln(`<td>${valProducts}</td>`);
+document.writeln(`<td>${totalQuantity}</td>`);
+document.writeln(`<td>${totalValue.toFixed(2)}</td>`);
+document.writeln("</tr>");
 document.writeln("</table>");
