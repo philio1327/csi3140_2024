@@ -10,3 +10,11 @@ h1{
 p, h2 {
     font-family: "Poppins", sans-serif;
 }
+textarea {
+    font-family: monospace; /*For tabular spacing*/
+    width: 300px;
+    height: fit-content;
+}
+#result {
+    height: 500px;
+}

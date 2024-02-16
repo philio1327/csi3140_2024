@@ -46,12 +46,13 @@ function printSentences() {
       }
     }
 
-    var output = "<table>";
-    output += "<tr><th>Letter</th><th>Occurrences</th></tr>";
+    var output = "        ------------------------\n";
+    output    += "        |Letter  |Occurrences  |\n";
+    output    += "        ------------------------\n"
     for (var j = 0; j < 26; j++) {
-      output += "<tr><td>" + String.fromCharCode(j + 97) + "</td><td>" + letterCounts[j] + "</td></tr>";
+      output += "        |" + String.fromCharCode(j + 97) + "       " + "|" + letterCounts[j] + "            " + "|\n";
+      output += "        ------------------------\n";
     }
-    output += "</table>";
 
     result.innerHTML = output;
   }

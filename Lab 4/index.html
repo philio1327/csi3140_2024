@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--------------------------------------------------------------Lab 4--------------------------------------------------------------->
-<!--------------------------------------------------------------Group 44------------------------------------------------------------------->
-<!--------------------------------------------------------------Philip Anderegg -- 8191716 -- Benjamin Flynn -- 300106230------------------>
+<!--------------------------------------------------------------Lab 4----------------------------------------------------------------------->
+<!--------------------------------------------------------------Group 44-------------------------------------------------------------------->
+<!--------------------------------------------------------------Philip Anderegg -- 8191716 -- Benjamin Flynn -- 300106230------------------->
 <!--------------------------------------------------------------February 17th, 2024--------------------------------------------------------->
-<!--------------------------------------------------------------Iluju Kiringa-------------------------------------------------------------->
+<!--------------------------------------------------------------Iluju Kiringa--------------------------------------------------------------->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -13,17 +13,21 @@
     </head>
     <body>
         <h1>Lab 4 - 8191716 - 300106230</h1>
-        <h2>11.7</h2>
+        <h2>Question - 11.7</h2>
         <h3>Click button to generate sentences</h3>
         <button onclick="printSentences()">Click me</button>
         <button onclick="clearSentences()">Clear sentences</button>
         <div id="sentence-container"></div>
-        <h2>11.14</h2>
-        <textarea id="textInput" rows="5" cols="50"></textarea><br>
+        <h2>Question - 11.14</h2>
+        <textarea id="textInput" rows="5" cols="50" placeholder="Type Letters to be Counted Here..."></textarea><br>
         <button onclick="countLetterOccurrences()">Count Letter Occurrences</button>
         <button onclick="hideTable()">Hide table</button>
         <br>
-        <div id="result"></div>
+        <textarea id="result" readonly>
+        ------------------------
+        |Letter  |Occurrences  |
+        </textarea>
+        
     </body>
 </html>
 <script src="lab4_script.js"></script>
