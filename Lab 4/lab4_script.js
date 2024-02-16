@@ -56,6 +56,6 @@ function printSentences() {
     result.innerHTML = output;
   }
 
-  function clearTable() {
+  function hideTable() {
     result.innerHTML = "";
 }
