@@ -14,11 +14,56 @@
     <body>
         <h1>Lab 5 - 8191716 - 300106230</h1>
         <h2 class="question">Question 12.6</h2>
+            <div class="container">
+                <h2>Customize Page</h2>
+                <form id="customizeForm">
+                    <div>
+                        <label for="backgroundColor">Background Color:</label>
+                        <input type="color" id="backgroundColor" name="backgroundColor">
+                    </div>
+                    <div>
+                        <label for="fontStyle">Font Style:</label>
+                        <select id="fontStyle" name="fontStyle">
+                            <option value="sans-serif">Sans-serif</option>
+                            <option value="serif">Serif</option>
+                        </select>
+                    </div>
+                    <button type="submit">Apply Changes</button>
+                </form>
+            </div>
         <h2 class="question">Question 13.3</h2>
+            <table id="canvas-q13">
+                <caption>Hold <em>Ctrl</em> (or <em>Control</em>) to draw blue.
+                    Hold <em>Shift</em> to draw red. Hold <em>Alt</em> to erase</caption>
+                <tbody id="tablebody"></tbody>
+            </table>
         <h2 class="question">Question 13.4</h2>
+            <button id="eraseAllBtn">Erase All</button>
         <h2 class="question">Question 13.7</h2>
+            <p>Drag image and click to let go</p>
+            <div class="margin">
+                <img id="dragImage" src="image.jpg" alt="Draggable Image">
+            </div>
         <h2 class="question">Question 14.17</h2>
-
+            <div>
+                <label for="red">Red:</label>
+                <input type="range" id="red" min="0" max="255" value="0">
+                <br>
+                <label for="green">Green:</label>
+                <input type="range" id="green" min="0" max="255" value="0">
+                <br>
+                <label for="blue">Blue:</label>
+                <input type="range" id="blue" min="0" max="255" value="0">
+                <br>
+                <canvas id="paintCanvas" width="800" height="400"></canvas>
+                <br>
+                <label for="lineWidth">Line Width:</label>
+                <input type="range" id="lineWidth" min="1" max="50" value="5">
+                <br>
+                <button onclick="toggleEraser()">Toggle Eraser</button>
+                <button onclick="clearCanvas()">Clear Canvas</button>
+                <button onclick="saveDrawing()">Save Drawing</button>
+            </div>
 
         <script src="lab5_8191716_300106230.js"></script>
     </body>
