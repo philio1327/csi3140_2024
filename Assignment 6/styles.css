@@ -1,0 +1,48 @@
+h1{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: blue;
+    font-size: 40px;
+}
+.question {
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+}
+/* Example styles */
+Cookies {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+serving, calories, fat-calories, fat, saturated-fat, cholesterol, sodium, carbohydrates, fiber, sugar, proteins {
+    margin-bottom: 10px;
+    margin-right: 75%;
+}
+
+quantity, unit {
+    font-weight: bold;
+}
+
+/* Add horizontal line after each nutrient */
+serving, calories, fat-calories, fat, saturated-fat, cholesterol, sodium, carbohydrates, fiber, sugar, proteins {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+/* Add newline after each nutrient */
+title::after, serving::after, calories::after, fat-calories::after, fat::after, saturated-fat::after, cholesterol::after, sodium::after, carbohydrates::after, fiber::after, sugar::after, proteins::after {
+    content: "\A \A"; /* Insert a newline */
+    white-space: pre; /* Preserve white space */
+}

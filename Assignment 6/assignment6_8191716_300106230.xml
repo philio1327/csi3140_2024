@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+<Cookies>
+<title>Grandma White’s Cookies</title>
+<serving>
+Serving Size:      
+    <quantity>1</quantity>
+    <unit>package</unit>
+    
+</serving>
+<calories>
+Calories:      
+    <quantity>260</quantity>
+    <unit>Calories</unit>
+
+</calories>
+
+<fat-calories>
+Fat Calories:      
+    <quantity>100</quantity>
+    <unit>Calories</unit>
+
+</fat-calories>
+
+<fat>
+Fat:      
+    <quantity>11</quantity>
+    <unit>grams</unit>
+
+</fat>
+<saturated-fat>
+  Saturated Fat:    
+    <quantity>2</quantity>
+    <unit>grams</unit>
+
+</saturated-fat>
+<cholesterol>
+  cholesterol:    
+    <quantity>5</quantity>
+    <unit>milligrams</unit>
+
+</cholesterol>
+<sodium>
+Sodium:      
+    <quantity>210</quantity>
+    <unit>milligrams</unit>
+
+</sodium>
+<carbohydrates>
+Carbohydrates:      
+    <quantity>36</quantity>
+    <unit>grams</unit>
+
+</carbohydrates>
+<fiber>
+Fiber:      
+    <quantity>2</quantity>
+    <unit>grams</unit>
+
+</fiber>
+<sugar>
+Sugar:      
+    <quantity>15</quantity>
+    <unit>grams</unit>
+
+</sugar>
+<proteins>
+Protein:      
+    <quantity>5</quantity>
+    <unit>grams</unit>
+
+</proteins>
+</Cookies>
