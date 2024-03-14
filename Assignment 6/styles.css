@@ -1,4 +1,135 @@
-h1{
+*{
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+big-title {
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    color: blue;
+}
+Cookies {
+    font-size: 16px;
+    border: 2px solid black;
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;
+}
+divider {
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+  }
+
+.question {
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
+}
+/* Example styles */
+title {
+    text-align: center;
+    margin: -4px 0;
+    letter-spacing: 0.15px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+}
+
+serving, calories, fat-calories, fat, saturated-fat, cholesterol, sodium, carbohydrates, fiber, sugar, proteins {
+    margin-bottom: 10px;
+    padding: 0;
+    margin: 0;
+}
+bold {
+    font-weight: bold;
+}
+serving {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2px 0;
+    border-bottom: 10px solid black;
+
+}
+
+value {
+    text-align: right;
+    text-indent: 5.22rem;
+}
+calories {
+    display: flex;
+    margin: 0px -2px;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: space-between;
+    border-bottom: 5px solid black;
+    
+}
+
+amount {
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+quantityCal {
+    margin: -7px -2px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    justify-content: right;
+    align-items: flex-end;
+    text-indent: 4rem;
+}
+fat-calories {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+quantityFat {
+    
+    justify-content: space-between;
+    align-items: flex-end;
+    text-indent: 4.13rem;
+}
+fat, saturated-fat, cholesterol, sodium, carbohydrates, fiber, sugar, proteins {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1px;
+    
+}
+value1 {
+    display: inline;
+    justify-content: left;
+}
+
+value2 {
+    display: flex;
+    justify-content: left;
+    text-indent: 2rem;
+    white-space: pre;
+}
+daily, percent {
+    display: flex;
+    font-weight: 800;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    
+}
+daily, fat, fat-calories, saturated-fat, cholesterol, sodium, carbohydrates, fiber, sugar {
+    border-bottom: 1px solid #888989;
+}
+proteins {
+    border-bottom: 5px solid black;
+}
+note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding: 0 8px;
+    text-indent: -8px;
+  }
+  h1{
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -11,38 +142,7 @@ h1{
     font-size: 30px;
     font-family: "Poppins", sans-serif;
 }
-/* Example styles */
-Cookies {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    display: inline-block;
-    border-bottom: 1px solid #000;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-}
-
-title {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-serving, calories, fat-calories, fat, saturated-fat, cholesterol, sodium, carbohydrates, fiber, sugar, proteins {
-    margin-bottom: 10px;
-    margin-right: 75%;
-}
-
-quantity, unit {
-    font-weight: bold;
-}
-
-/* Add horizontal line after each nutrient */
-serving, calories, fat-calories, fat, saturated-fat, cholesterol, sodium, carbohydrates, fiber, sugar, proteins {
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
-/* Add newline after each nutrient */
-title::after, serving::after, calories::after, fat-calories::after, fat::after, saturated-fat::after, cholesterol::after, sodium::after, carbohydrates::after, fiber::after, sugar::after, proteins::after {
-    content: "\A \A"; /* Insert a newline */
-    white-space: pre; /* Preserve white space */
+object {
+    height: 500px;
+    width: 300px;
 }

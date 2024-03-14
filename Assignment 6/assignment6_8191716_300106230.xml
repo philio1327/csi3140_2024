@@ -1,73 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="styles.css"?>
 <Cookies>
-<title>Grandma White’s Cookies</title>
+<title>Nutrition Facts</title>
+<numServing>1 serving per container</numServing>
 <serving>
-Serving Size:      
-    <quantity>1</quantity>
-    <unit>package</unit>
-    
+<bold>Serving Size</bold>      
+    <value>1 package</value>
 </serving>
+<amount>Amount per serving</amount>
 <calories>
-Calories:      
-    <quantity>260</quantity>
-    <unit>Calories</unit>
-
+<text>Calories</text>      
+    <quantityCal>260</quantityCal>
 </calories>
-
 <fat-calories>
-Fat Calories:      
-    <quantity>100</quantity>
-    <unit>Calories</unit>
-
+    <info>(Fat Calories)</info>      
+    <quantityFat>100 Calories</quantityFat>
 </fat-calories>
-
+<daily>% Daily Value *</daily>
 <fat>
-Fat:      
-    <quantity>11</quantity>
-    <unit>grams</unit>
-
+<value1><bold>Fat</bold> 11 g</value1>     
+    <percent>14 %</percent>
 </fat>
 <saturated-fat>
-  Saturated Fat:    
-    <quantity>2</quantity>
-    <unit>grams</unit>
-
+  <value2>Saturated Fat 2 g</value2>
 </saturated-fat>
 <cholesterol>
-  Cholesterol:    
-    <quantity>5</quantity>
-    <unit>milligrams</unit>
-
+  <value3><bold>Cholesterol</bold> 5 mg</value3>
+  <percent>2 %</percent>    
 </cholesterol>
 <sodium>
-Sodium:      
-    <quantity>210</quantity>
-    <unit>milligrams</unit>
-
+<value4><bold>Sodium</bold> 210 mg</value4>
+<percent>9 %</percent>      
 </sodium>
 <carbohydrates>
-Carbohydrates:      
-    <quantity>36</quantity>
-    <unit>grams</unit>
-
+<value5><bold>Carbohydrates</bold> 36 g</value5>
+<percent>13 %</percent>      
 </carbohydrates>
 <fiber>
-Fiber:      
-    <quantity>2</quantity>
-    <unit>grams</unit>
-
+<value6><bold>Fiber</bold> 2 g</value6>     
+<percent>7 %</percent>
 </fiber>
 <sugar>
-Sugar:      
-    <quantity>15</quantity>
-    <unit>grams</unit>
-
+<value7><bold>Sugar</bold> 15 g</value7>      
+<percent>50 %</percent>
 </sugar>
 <proteins>
-Protein:      
-    <quantity>5</quantity>
-    <unit>grams</unit>
-
+<value8><bold>Protein</bold> 5 g</value8>      
+<percent>9 %</percent>
 </proteins>
+<note>* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily
+      diet. 2,000 calories a day is used for general nutrition advice.
+</note>
 </Cookies>
