@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Define complex types for elements with child elements -->
+  <xs:element name="Cookies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title"/>
+        <xs:element ref="numServing"/>
+        <xs:element ref="serving"/>
+        <xs:element ref="amount"/>
+        <xs:element ref="calories"/>
+        <xs:element ref="fat-calories"/>
+        <xs:element ref="daily"/>
+        <xs:element ref="fat"/>
+        <xs:element ref="saturated-fat"/>
+        <xs:element ref="cholesterol"/>
+        <xs:element ref="sodium"/>
+        <xs:element ref="carbohydrates"/>
+        <xs:element ref="fiber"/>
+        <xs:element ref="sugar"/>
+        <xs:element ref="proteins"/>
+        <xs:element ref="note"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define elements -->
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="numServing" type="xs:string"/>
+  <xs:element name="amount" type="xs:string"/>
+  <xs:element name="daily" type="xs:string"/>
+  <xs:element name="note" type="xs:string"/>
+  
+  <!-- Define complex types for elements with mixed content -->
+  <xs:element name="serving">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="bold"/>
+        <xs:element ref="value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="calories">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="text"/>
+        <xs:element ref="quantityCal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="fat-calories">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="info"/>
+        <xs:element ref="quantityFat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define elements with simple content -->
+  <xs:element name="bold" type="xs:string"/>
+  <xs:element name="value" type="xs:string"/>
+  <xs:element name="text" type="xs:string"/>
+  <xs:element name="quantityCal" type="xs:integer"/>
+  <xs:element name="info" type="xs:string"/>
+  <xs:element name="quantityFat" type="xs:string"/>
+  <xs:element name="percent" type="xs:string"/>
+  
+</xs:schema>

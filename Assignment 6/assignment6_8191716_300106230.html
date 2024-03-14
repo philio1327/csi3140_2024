@@ -12,5 +12,24 @@
         <h2 class="question">Question 15.7 - XML Document</h2>
         <p>Here is the XML Document Loaded: </p>
         <object data="assignment6_8191716_300106230.xml" type="application/xml"></object>
+
+        <h2 class="question">Question 15.8 - XML Schema Document</h2>
+        <p>The schema document can be found in this assignment folder under "assignment6_8191716_300106230.xsd" but also, below are the contents:</p>
+        <div id="xml-content"></div>
+
+    <script>
+        // Fetch the XML document
+        fetch('assignment6_8191716_300106230.xml')
+            .then(response => response.text())
+            .then(xml => {
+                // Parse the XML
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xml, 'text/xml');
+
+                // Convert XML to string and display in the 'xml-content' div
+                document.getElementById('xml-content').innerText = new XMLSerializer().serializeToString(xmlDoc.documentElement);
+            })
+            .catch(error => console.error('Error fetching XML:', error));
+    </script>
     </body>
 </html>

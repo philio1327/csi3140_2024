@@ -137,10 +137,12 @@ note {
     font-family: "Poppins", sans-serif;
     color: blue;
     font-size: 40px;
+    font-weight: bold;
 }
 .question {
     font-size: 30px;
     font-family: "Poppins", sans-serif;
+    font-weight: bold;
 }
 object {
     height: 500px;
