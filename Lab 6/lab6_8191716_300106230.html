@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- NOTE MUST RUN WITH LIVE SERVER -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" name="width=device-width, initial-scale=1.0">
+        <title>lab 6 - 8191716 - 300106230</title>
+    </head>
+    <body>
+        <h1>lab 6 - 8191716 - 300106230</h1>
+        <h2 class="question">Question 15.9 - XSL Stylesheet</h2>
+        <p>Here is the XML Document Loaded: </p>
+        <object data="lab6_8191716_300106230.xml" type="application/xml" style="width: 500px; height: 600px;"></object>
+
+        <h2 class="question">Question 15.10 - XSL Sorting</h2>
+        <object data="sorting_bypage_xml.xml" type="application/xml" style="width: 500px; height: 600px;"></object>
+
+
+    <script>
+        // Fetch the XML document
+        fetch('lab6_8191716_300106230.xml')
+            .then(response => response.text())
+            .then(xml => {
+                // Parse the XML
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xml, 'text/xml');
+
+            })
+            .catch(error => console.error('Error fetching XML:', error));
+
+            fetch('sorting_bypage_xml.xml')
+            .then(response => response.text())
+            .then(xml => {
+                // Parse the XML
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xml, 'text/xml');
+
+            })
+            .catch(error => console.error('Error fetching XML:', error));
+    </script>
+    </body>
+</html>

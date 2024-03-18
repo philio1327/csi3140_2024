@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <?xml-stylesheet type="text/xsl" href="lab6_8191716_300106230.xsl"?>
+<Cookies>
+<title>Nutrition Facts</title>
+<numServing>1 serving per container</numServing>
+<serving>
+<bold>Serving Size</bold>      
+    <value>1 package</value>
+</serving>
+<amount>Amount per serving</amount>
+<calories>
+<text>Calories</text>      
+    <quantityCal>260</quantityCal>
+</calories>
+<fat-calories>
+    <info>(Fat Calories)</info>      
+    <quantityFat>100 Calories</quantityFat>
+</fat-calories>
+<daily>% Daily Value *</daily>
+<fat>
+<value1><bold>Fat</bold> 11 g</value1>     
+    <percent>14 %</percent>
+</fat>
+<saturated-fat>
+  <value2>Saturated Fat 2 g</value2>
+</saturated-fat>
+<cholesterol>
+  <value3><bold>Cholesterol</bold> 5 mg</value3>
+  <percent>2 %</percent>    
+</cholesterol>
+<sodium>
+<value4><bold>Sodium</bold> 210 mg</value4>
+<percent>9 %</percent>      
+</sodium>
+<carbohydrates>
+<value5><bold>Carbohydrates</bold> 36 g</value5>
+<percent>13 %</percent>      
+</carbohydrates>
+<fiber>
+<value6><bold>Fiber</bold> 2 g</value6>     
+<percent>7 %</percent>
+</fiber>
+<sugar>
+<value7><bold>Sugar</bold> 15 g</value7>      
+<percent>50 %</percent>
+</sugar>
+<proteins>
+<value8><bold>Protein</bold> 5 g</value8>      
+<percent>9 %</percent>
+</proteins>
+<note>* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily
+      diet. 2,000 calories a day is used for general nutrition advice.
+</note>
+</Cookies>
