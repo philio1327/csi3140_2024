@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blockedEmails>
+    <email>blocked1@example.com</email>
+    <email>blocked2@example.com</email>
+    <email>blocked3@example.com</email>
+    <!-- Add more email addresses as needed -->
+</blockedEmails>

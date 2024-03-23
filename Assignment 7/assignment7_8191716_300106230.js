@@ -10,6 +10,16 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Questions: 16.7
 /////////////////////////////////////////////////////////////// 16.7 /////////////////////////////////////////////////////////////////////////////
+function loadXMLDoc(filename) {
+    if (window.XMLHttpRequest) {
+        xhttp = new XMLHttpRequest();
+    } else { // For IE5 and IE6
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.open("GET", filename, false);
+    xhttp.send();
+    return xhttp.responseXML;
+}
 document.addEventListener('DOMContentLoaded', function() {
     // Function to validate email format
     function isValidEmail(email) {
@@ -21,8 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to check if email is in the forbidden list
     function isForbiddenEmail(email) {
         // Dummy list of forbidden emails (replace with actual list)
-        const forbiddenEmails = ["forbidden@example.com", "banned@example.com"];
-        return forbiddenEmails.includes(email);
+        let xmlDoc = loadXMLDoc("blocked_emails.xml");
+        let blockedEmails = xmlDoc.getElementsByTagName("email");
+        for (let i = 0; i < blockedEmails.length; i++){
+            if (blockedEmails[i].childNodes[0].nodeValue === email){
+                return true;
+            }
+        }
+        return false;
     }
 
     // Function to display error message
@@ -33,8 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to handle form submission
     function submitForm(event) {
-        event.preventDefault(); // Prevent default form submission
-
         // Get form data
         const formData = new FormData(event.target);
 
@@ -45,50 +59,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!name.trim()) {
             displayErrorMessage('Please enter your name.');
+            event.preventDefault(); // Prevent form submission
             return;
         }
 
         if (!comments.trim()) {
             displayErrorMessage('Please enter your comments.');
+            event.preventDefault(); // Prevent form submission
             return;
         }
 
         if (!isValidEmail(email)) {
             displayErrorMessage('Please enter a valid email address.');
+            event.preventDefault(); // Prevent form submission
             return;
         }
 
         if (isForbiddenEmail(email)) {
             displayErrorMessage('Sorry, your email address is not allowed to post feedback.');
+            event.preventDefault(); // Prevent form submission
             return;
         }
 
-        // If all validations pass, you can proceed with Ajax submission
-        // Here, you can use XMLHttpRequest or fetch API to submit the form data
+        // If all validations pass, construct the message for the alert dialog
+        const alertMessage = `Name: ${name}\nEmail: ${email}\nComments: ${comments}`;
 
-        // Example using fetch API
-        fetch('http://www.deitel.com', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            // Handle response as needed
-            if (response.ok) {
-                alert('Feedback submitted successfully!');
-                // Redirect user to the specified page
-                window.location.href = formData.get('redirect');
-            } else {
-                throw new Error('Failed to submit feedback.');
-            }
-        })
-        .catch(error => {
-            // Handle errors
-            console.error('Error:', error);
-            alert('Failed to submit feedback. Please try again later.');
-        });
+        // Show the alert dialog with the form data
+        alert(alertMessage);
+
+        // Reload the webpage after the alert dialog is closed
+        location.reload();
     }
 
     // Attach event listener for form submission
     const feedbackForm = document.querySelector('form');
     feedbackForm.addEventListener('submit', submitForm);
 });
+
