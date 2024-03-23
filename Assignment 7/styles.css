@@ -1,0 +1,13 @@
+h1{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: blue;
+    font-size: 40px;
+}
+.question {
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+}
