@@ -30,3 +30,7 @@ window.onload = function() {
     xhttp.open("GET", "states.php", true);
     xhttp.send();
 };
+function setHeight(){
+    let image2Height = document.getElementById("image2").height;
+    document.getElementById("image1").style.height = image2Height + "px";
+}

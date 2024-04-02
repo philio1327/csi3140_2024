@@ -6,50 +6,71 @@ $states = "Mississippi Alabama Texas Massachusetts Kansas";
 echo "<h2>Original List of States:</h2>";
 echo "<p>$states</p>";
 
-// Step 3: Split the string into an array of states
-$statesArray = explode(" ", $states);
+// Part a) Search for a word in the string $states that ends in "xas"
+$matches = [];
+preg_match('/\b\w+xas\b/', $states, $matches);
 
-// Step 4: Search for a word in $states that ends in "xas" and store it in element 0 of $statesArray
-foreach ($statesArray as $state) {
-    if (substr($state, -3) === "xas") {
-        $statesArray[0] = $state;
-        break;
-    }
-}
+// Initialize the $statesArray
+$statesArray = [];
 
-// Step 5: Search for a word in $states that begins with "k" and ends in "s" and store it in element 1 of $statesArray
-foreach ($statesArray as $state) {
-    if (strtolower(substr($state, 0, 1)) === "k" && strtolower(substr($state, -1)) === "s") {
-        $statesArray[1] = $state;
-        break;
-    }
-}
+// Store the matched word as element 0 of $statesArray
+$statesArray[0] = !empty($matches) ? $matches[0] : "";
 
-// Step 6: Search for a word in $states that begins with "M" and ends in "s" and store it in element 2 of $statesArray
-foreach ($statesArray as $state) {
-    if (strtoupper(substr($state, 0, 1)) === "M" && strtolower(substr($state, -1)) === "s") {
-        $statesArray[2] = $state;
-        break;
-    }
-}
+// Show contents of Array 
+echo "<h2>Array after Part a): </h2>";
+echo "<pre>";
+print_r($statesArray);
+echo "</pre>";
 
-// Step 7: Search for a word in $states that ends in "a" and store it in element 3 of $statesArray
-foreach ($statesArray as $state) {
-    if (strtolower(substr($state, -1)) === "a") {
-        $statesArray[3] = $state;
-        break;
-    }
-}
+// Part b) 
+// Search for a word in the string $states that begins with "k" and ends with "s"
+$matches = [];
+preg_match('/\bk\w+s\b/i', $states, $matches);
 
-// Step 8: Search for a word in $states at the beginning of the string that starts with "M" and store it in element 4 of $statesArray
-foreach ($statesArray as $state) {
-    if (strtoupper(substr($state, 0, 1)) === "M") {
-        $statesArray[4] = $state;
-        break;
-    }
-}
+// Store the matched word as element 1 of $statesArray
+$statesArray[1] = !empty($matches) ? $matches[0] : "";
 
-// Step 9: Output the array $statesArray to the screen
+// Show contents of Array 
+echo "<h2>Array after Part b): </h2>";
+echo "<pre>";
+print_r($statesArray);
+echo "</pre>";
+
+// Part c) Search for a word in the string $states that begins with "M" and ends with "s"
+$matches = [];
+preg_match('/\bM\w+s\b/i', $states, $matches);
+
+// Store the matched word as element 2 of $statesArray
+$statesArray[2] = !empty($matches) ? $matches[0] : "";
+
+// Show contents of Array
+echo "<h2>Array after Part c): </h2>";
+echo "<pre>";
+print_r($statesArray);
+echo "</pre>";
+
+// Part d) Search for a word in $states that ends in a. Store this word in element 3 of the array
+$matches = [];
+preg_match('/\b\w+a\b/i', $states, $matches); // /i means case insensitive \b means blank and \w means word (0 or mult chars)
+$statesArray[3] = !empty($matches) ? $matches[0] : "";
+
+echo "<h2>Array after Part d): </h2>";
+echo "<pre>";
+print_r($statesArray);
+echo "</pre>";
+
+// Part e)  Search for a word in $states at the beginning of the string that starts with M. Store this
+// word in element 4 of the array.
+$matches = [];
+preg_match('/^M\w*/i', $states, $matches);
+$statesArray[4] = !empty($matches) ? $matches[0] : "";
+
+echo "<h2>Array after Part e): </h2>";
+echo "<pre>";
+print_r($statesArray);
+echo "</pre>";
+
+// Last Step: Output the array $statesArray to the screen
 echo "<h2>Array of States:</h2>";
 echo "<pre>";
 print_r($statesArray);
