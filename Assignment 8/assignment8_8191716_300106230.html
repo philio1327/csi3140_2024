@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" name="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="styles.css">
+        <title>Assignment 8 - 8191716 - 300106230</title>
+    </head>
+    <body>
+        <h1>Assignment 8 - 8191716 - 300106230</h1>
+        <h2 class="question">Question 19.4 - PHP Regex</h2>
+        <p id="regex-explanation">The regular expression pattern to match the described string is: <br> $pattern = '/^A[A-Za-z0-9]{3}+[Bb]+[0-9]{2}$/';</p>
+        <p>The Regex works as follows: </p>
+        <ul>
+            <li>A matches that the input must match a capital A</li>
+            <li>[A-Za-z0-9]{3} matches that the next three characters must be alphanumeric, i.e. capital or lowercase letter or a number</li>
+            <li>[Bb] matches that the character(s) following the 3 alphanumeric ones are the letter b or B (1 or multiple)</li>
+            <li>[0-9]{2} matches that the last 2 characters are numbers 0-9 and exactly 2 numbers</li>
+            <li>The $ at the beginning and end denotes the beginning and end of the pattern.</li>
+        </ul>
+        <br>
+        <h2 class="question">Question 19.7 - PHP Script</h2>
+        <p>Contents of <b>states.php</b></p>
+        <div id="content-container"></div>
+        <p>Output of <b>states.php</b></p>
+        <img src="php_screenshot.PNG">
+        <script src="assignment8_8191716_300106230.js"></script>
+    </body>
+</html>
