@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Pork Chop",
+        "filename": "porkchop_full.jpeg"
+    },
+    {
+        "id": 2,
+        "title": "Ribeye",
+        "filename": "ribeye_full.jpeg"
+    },
+    {
+        "id": 3,
+        "title": "apple",
+        "filename": "apple_full.jpg"
+    }
+]

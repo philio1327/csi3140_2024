@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Pork Chop",
+        "price": "$10.99"
+    },
+    {
+        "id": 2,
+        "title": "Ribeye",
+        "price": "$20.49"
+    },
+    {
+        "id": 3,
+        "title": "apple",
+        "price": "$2.99"
+    }
+]
